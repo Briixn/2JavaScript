@@ -20,6 +20,53 @@ var usuario = {
     "nombre": "Brix",
     apellido: 'Jarrin',
     edad: 28,
+    //imprimirEnConsola: function(){
+    //    console.log(this.nombre + ' ' + this.apellido + ' ' + this.edad);
+    //}
+   imprimirEnConsola: sumarDosNumeros
 };
 
 console.log(usuario)
+
+delete usuario.edad;
+console.log(usuario);
+usuario.cedula = '1722589648';
+console.log(usuario);
+
+// no se puede definir nuevas caracteristicas sin haberlas definido antes a mas de 1 nivel
+//usuario.cedula.ec = '1722589648';
+
+//para ello primero hay q definirla
+usuario.mascotas = {};
+usuario.mascotas.nombre = 'cachetes';
+
+console.log(typeof  nombre)
+console.log(typeof  edad)
+console.log(typeof  FechaNacimiento)
+console.log(typeof  usuario)
+
+//no se tendra ni public ni private ni tipos de datos, no constructores, si existen los metodos imprimir : ()
+
+//seguir las normas del Codigo Limpio
+
+function sumarDosNumeros(numeroUno,numeroDos){
+    return numeroDos+numeroUno;
+}
+
+console.log(sumarDosNumeros(1,2));
+
+var sumardosNumerosVersionDos = function noImportaSiEscriboElNOmbre(numeroUno,numeroDos){
+    return numeroUno+numeroDos;
+}
+
+//Funcion Anonima
+
+var sumarDosNumerosVersionTres = function (numeroUno,numeroDos){
+    return numeroUno+numeroDos;
+}
+
+console.log(sumardosNumerosVersionDos(1,2,3,4,5,6,7,8,9))
+console.log(sumarDosNumerosVersionTres(1,2))
+
+console.log(usuario.imprimirEnConsola);
+
